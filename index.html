@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Currency Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="home">
+        <h1>Game Currency Generator</h1>
+        <button onclick="startProcess('freefire')">Generate Free Fire Diamonds</button>
+        <button onclick="startProcess('roblox')">Generate Robux</button>
+        <button onclick="startProcess('fortnite')">Generate V-Bucks</button>
+        <button onclick="startProcess('pubg')">Generate PUBG UC</button>
+        <button onclick="startProcess('codm')">Generate CODM CP</button>
+        <button onclick="startProcess('steam')">Generate Steam Gift Card</button>
+        <button onclick="startProcess('googleplay')">Generate Google Play Gift Card</button>
+    </div>
+
+    <div id="process">
+        <h2>Enter Your Information</h2>
+        <label for="playerId">Player ID:</label>
+        <input type="text" id="playerId" placeholder="Enter your ID here">
+        <button onclick="confirmID()">Confirm ID</button>
+    </div>
+
+    <div id="confirmation">
+        <h2>Confirm Your ID</h2>
+        <p id="displayID">Your entered ID: </p>
+        <button onclick="nextStep()">Confirm</button>
+    </div>
+
+    <div id="amount">
+        <h2>How many would you like to send?</h2>
+        <input type="number" id="amountInput" placeholder="Enter amount">
+        <button onclick="processTransaction()">Send</button>
+    </div>
+
+    <div id="loading">
+        <h2>Processing...</h2>
+        <div class="spinner"></div>
+    </div>
+
+    <div id="result">
+        <h2>Success!</h2>
+        <p>your gift has been sent to your account! ⏳</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
